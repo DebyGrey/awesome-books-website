@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Awesome books: plain JavaScript with objects</b></h3>
+  <h3><b>Awesome Books Website</b></h3>
 
 </div>
 
@@ -115,6 +115,11 @@ You can deploy this project:
 - GitHub: [@githubhandle](https://github.com/DebyGrey)
 - Twitter: [@twitterhandle](https://twitter.com/Deby_grey)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/deborah-fashoro)
+
+👤 **Maboela Maserame**
+
+- GitHub: [@githubhandle](https://github.com/God-Logic)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/maboela-maserame-35a3b71b6/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
