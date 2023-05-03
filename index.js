@@ -78,6 +78,16 @@ addBookBtn.querySelectorAll('input').forEach((input) => {
 });
 
 // Check if form data exists in local storage on page load
+window.addEventListener("load", () => {
+  const storedFormData = localStorage.getItem("formData");
+  if (storedFormData) {
+    // Parse stored form data into an object
+    const parsedFormData = JSON.parse(storedFormData);
 
+    // Populate form fields with stored data
+    titleField.value = parsedFormData.title;
+    authorField.value = parsedFormData.author;
+  }
+});
 // Display the initial collection of books
 displayBooks();
