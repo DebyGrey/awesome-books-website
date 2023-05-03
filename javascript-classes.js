@@ -69,20 +69,27 @@ class BookCollection {
 
   // Function to display all books
   displayBooks() {
-    this.bookList.innerHTML = '';
-    this.books.forEach((book) => {
-      const bookListItem = document.createElement('div');
-      bookListItem.innerHTML = `${book.title} <br> ${book.author} <br> `;
-      const removeBtn = document.createElement('button');
-      removeBtn.textContent = 'Remove';
-      removeBtn.addEventListener('click', () => {
-        this.removeBookFromCollection(book.title);
-        this.displayBooks();
+    if (this.books.length === 0) {
+      this.bookList.innerHTML = 'No books added!';
+      this.bookList.classList.add('book-list-error-msg');
+    } else {
+      this.bookList.classList.remove('book-list-error-msg');
+      this.bookList.innerHTML = '';
+      this.books.forEach((book) => {
+        const bookListItem = document.createElement('div');
+        bookListItem.classList.add('book-list-item');
+        bookListItem.innerHTML = `"${book.title}" by ${book.author}`;
+        const removeBtn = document.createElement('button');
+        removeBtn.classList.add('remove-btn');
+        removeBtn.textContent = 'Remove';
+        removeBtn.addEventListener('click', () => {
+          this.removeBookFromCollection(book.title);
+          this.displayBooks();
+        });
+        bookListItem.appendChild(removeBtn);
+        this.bookList.appendChild(bookListItem);
       });
-      const hr = document.createElement('hr');
-      bookListItem.append(removeBtn, hr);
-      this.bookList.appendChild(bookListItem);
-    });
+    }
   }
 }
 

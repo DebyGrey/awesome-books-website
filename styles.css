@@ -1,0 +1,100 @@
+/* General CSS with mobile first approach */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 5% 10%;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.book-list-section {
+  padding: 5% 0%;
+}
+
+.book-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.book-list {
+  border: 1px solid #d3d3d3;
+  width: 90%;
+  margin: auto;
+}
+
+.book-list-error-msg {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-list-item {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0% 2%;
+}
+
+.remove-btn {
+  background-color: red;
+  font-size: 12px;
+  color: #fff;
+  height: 25px;
+  width: 60px;
+  border: none;
+}
+
+.remove-btn:hover {
+  background-color: rgb(165, 7, 7);
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+form h2 {
+  text-align: center;
+}
+
+form input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  padding: 0% 2%;
+}
+
+#add-book-btn {
+  background-color: royalblue;
+  color: #fff;
+  height: 40px;
+  border: none;
+}
+
+#add-book-btn:hover {
+  background-color: blue;
+  color: #fff;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .book-list-section {
+    padding: 0% 25%;
+  }
+}
