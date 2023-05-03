@@ -78,8 +78,8 @@ addBookBtn.querySelectorAll('input').forEach((input) => {
 });
 
 // Check if form data exists in local storage on page load
-window.addEventListener("load", () => {
-  const storedFormData = localStorage.getItem("formData");
+window.addEventListener('load', () => {
+  const storedFormData = localStorage.getItem('formData');
   if (storedFormData) {
     // Parse stored form data into an object
     const parsedFormData = JSON.parse(storedFormData);
