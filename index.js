@@ -37,6 +37,7 @@ function displayBooks() {
 }
 
 // Get all input and form ids
+const addBookForm = document.querySelector('form');
 const addBookBtn = document.querySelector('#add-book-btn');
 const titleField = document.querySelector('#title');
 const authorField = document.querySelector('#author');
@@ -66,12 +67,12 @@ addBookBtn.addEventListener('click', (event) => {
 });
 
 // Add event listener to form input fields' change event
-addBookBtn.querySelectorAll('input').forEach((input) => {
+addBookForm.querySelectorAll('input').forEach((input) => {
   input.addEventListener('change', () => {
     // Store form data in object
     const formData = {
-      title: addBookBtn.title.value,
-      author: addBookBtn.author.value,
+      title: addBookForm.title.value,
+      author: addBookForm.author.value,
     };
     localStorage.setItem('formData', JSON.stringify(formData));
   });
@@ -92,3 +93,4 @@ window.addEventListener('load', () => {
 
 // Display the initial collection of books
 displayBooks();
+// localStorage.clear();
