@@ -60,8 +60,8 @@ addBookBtn.addEventListener('click', (event) => {
 addBookBtn.querySelectorAll('input').forEach((input) => {
   input.addEventListener('change', () => {
     const formData = {
-      title: addBookBtn.title.value,
-      author: addBookBtn.author.value,
+      title: addBookForm.title.value,
+      author: addBookForm.author.value,
     };
     localStorage.setItem('formData', JSON.stringify(formData));
   });
