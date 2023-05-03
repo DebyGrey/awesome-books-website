@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Awesome books: plain JavaScript with objects</b></h3>
+  <h3><b>Awesome Books Website</b></h3>
 
 </div>
 
