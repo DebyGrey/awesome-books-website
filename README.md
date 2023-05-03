@@ -116,6 +116,11 @@ You can deploy this project:
 - Twitter: [@twitterhandle](https://twitter.com/Deby_grey)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/deborah-fashoro)
 
+👤 **Maboela Maserame**
+
+- GitHub: [@githubhandle](https://github.com/God-Logic)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/maboela-maserame-35a3b71b6/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
