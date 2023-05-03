@@ -32,6 +32,7 @@ function displayBooks() {
   });
 }
 
+const addBookForm = document.querySelector('form');
 const addBookBtn = document.querySelector('#add-book-btn');
 const titleField = document.querySelector('#title');
 const authorField = document.querySelector('#author');
@@ -57,11 +58,11 @@ addBookBtn.addEventListener('click', (event) => {
   displayBooks();
 });
 
-addBookBtn.querySelectorAll('input').forEach((input) => {
+addBookForm.querySelectorAll('input').forEach((input) => {
   input.addEventListener('change', () => {
     const formData = {
-      title: addBookForm.title.value,
-      author: addBookForm.author.value,
+      title: titleField.value,
+      author: authorField.value,
     };
     localStorage.setItem('formData', JSON.stringify(formData));
   });
