@@ -192,14 +192,3 @@ document
 document
   .querySelector('#contact')
   .addEventListener('click', (e) => Router.showSection(e));
-
-window.addEventListener('load', () => {
-  const title = document.querySelector('#title');
-  const author = document.querySelector('#author');
-  const storedFormData = localStorage.getItem('formData');
-  if (storedFormData) {
-    const parsedFormData = JSON.parse(storedFormData);
-    title.value = parsedFormData.title;
-    author.value = parsedFormData.author;
-  }
-});
