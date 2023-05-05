@@ -9,19 +9,42 @@
   </head>
   <body>
     <header>
-      <h1>All awesome books</h1>
+      <div class="logo">Awesome Books</div>
+      <img class="hamburger" src="./images/icon-menu.png"/>
+      <nav>
+        <a class="active" id="list" href="#">List</a>
+        <a id="add-new" href="#">Add new</a>
+        <a id="contact" href="#">Contact</a>
+      </nav>
     </header>
     <section class="book-list-section">
       <div class="book-list-container">
+        <h1>All awesome books</h1>
         <div class="book-list"> </div>
-        <form>
-          <h2>Add a new book</h2>
-          <input type="text" placeholder="Title" id="title" required />
-          <input type="text" placeholder="Author" id="author" required />
+      </div>
+    </section>
+    <section class="add-new-book-section hide-section">
+      <div class="add-new-book-container">
+        <h1>Add a new book</h1>
+        <form id="book-form">
+          <input type="text" placeholder="Title" id="title" />
+          <input type="text" placeholder="Author" id="author" />
           <button id="add-book-btn" type="submit">Add</button>
         </form>
       </div>
     </section>
-    <script type="text/javascript" src="./javascript-classes.js"></script>
+     <section class="contact-section hide-section">
+      <div class="contact-container">
+        <h1>Contact Information</h1>
+        <p>Do you have any questions or you just wanna say "Hello"? You can reach out to us.</p>
+        <ul>
+          <li>Email: info@awesomebooks.com</li>
+          <li>Phone: +1234567890</li>
+          <li>Address: abc, xyz street, USA. </li>
+        </ul>
+      </div>
+    </section>
+    <footer><p> Copyright &copy Awesome Books. All rights reserved.</p></footer>
+    <script type="text/javascript" src="./app.js"></script>
   </body>
 </html>

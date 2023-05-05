@@ -5,24 +5,64 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 header {
-  padding: 5% 10%;
+  padding: 5% 5%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
-  text-align: center;
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 45px;
+  margin: auto;
+  margin: 1% 30%;
 }
 
-.book-list-section {
+.danger {
+  background-color: #f8d7da;
+}
+
+.success {
+  background-color: #d4edda;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hide-section {
+  display: none;
+}
+
+.book-list-section,
+.add-new-book-section,
+.contact-section {
   padding: 5% 0%;
 }
 
-.book-list-container {
+.book-list-container,
+.add-new-book-container,
+.contact-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-list-container,
+.add-new-book-container,
+.contact-container h1 {
+  text-align: center;
 }
 
 .book-list {
@@ -93,8 +133,80 @@ form input {
   height: 40px;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0%;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 375px) {
+  .hamburger {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 12px;
+  }
+
+  .contact-container p {
+    width: 80%;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .book-list-section {
-    padding: 0% 25%;
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: royalblue;
+  }
+
+  .active {
+    color: royalblue;
+  }
+
+  .book-list-section,
+  .add-new-book-section,
+  .contact-section {
+    padding: 10% 20% 5% 20%;
   }
 }
