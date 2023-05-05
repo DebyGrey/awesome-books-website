@@ -10,10 +10,12 @@ class BookCollection {
   constructor() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
     this.addBookBtn = document.querySelector('#add-book-btn');
+    this.addBookForm = document.querySelector('form');
     this.titleField = document.querySelector('#title');
     this.authorField = document.querySelector('#author');
     this.bookList = document.querySelector('.book-list');
-    this.addBookBtn.addEventListener('click', (event) => this.addBookToCollection(event));
+    this.addBookForm.addEventListener('submit', (event) => this.addBookToCollection(event));
+    // this.addBookBtn.addEventListener('click', (event) => this.addBookToCollection(event));
     this.titleField.addEventListener('change', () => this.updateInputFields());
     this.authorField.addEventListener('change', () => this.updateInputFields());
 
@@ -59,6 +61,8 @@ class BookCollection {
     this.books.push(book);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
+    this.addBookForm.reset();
+    localStorage.removeItem('formData');
   }
 
   // Function to remove a book object from the collection
