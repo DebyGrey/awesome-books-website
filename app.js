@@ -44,7 +44,7 @@ class Router {
     }
   }
 
-  static showSection(e) {
+  static getSectionID(e) {
     e.preventDefault();
     const currentSection = e.target.id;
     localStorage.setItem('currentSection', currentSection);
@@ -183,12 +183,12 @@ document.querySelector('#book-form').addEventListener('submit', (e) => UI.addBoo
 document.querySelector('#title').addEventListener('change', UI.updateInputFields);
 document.querySelector('#author').addEventListener('change', UI.updateInputFields);
 // Event: show list section
-document.querySelector('#list').addEventListener('click', (e) => Router.showSection(e));
+document.querySelector('#list').addEventListener('click', (e) => Router.getSectionID(e));
 // Event: show add new book section
 document
   .querySelector('#add-new')
-  .addEventListener('click', (e) => Router.showSection(e));
+  .addEventListener('click', (e) => Router.getSectionID(e));
 // Event: show list section
 document
   .querySelector('#contact')
-  .addEventListener('click', (e) => Router.showSection(e));
+  .addEventListener('click', (e) => Router.getSectionID(e));
